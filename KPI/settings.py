@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'theme',
     'django_browser_reload',
     'chartjs',
+    'Backend',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

@@ -1,0 +1,1 @@
+web: gunicorn KPI.wsgi --log-file -

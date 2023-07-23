@@ -8,3 +8,7 @@ def index(request):
 def calender(request):
     context = {}
     return render(request, 'Backend/calendar.html', context)
+
+def kpibreakdown(request):
+    context = {}
+    return render(request, 'Backend/personal.html', context)

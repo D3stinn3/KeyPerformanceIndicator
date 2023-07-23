@@ -881,6 +881,10 @@ select {
   margin-top: 2rem;
 }
 
+.ml-3 {
+  margin-left: 0.75rem;
+}
+
 .block {
   display: block;
 }
@@ -979,6 +983,10 @@ select {
 
 .max-w-xl {
   max-width: 36rem;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
 }
 
 .flex-grow {
@@ -1113,6 +1121,10 @@ select {
   border-top-width: 1px;
 }
 
+.border-b-2 {
+  border-bottom-width: 2px;
+}
+
 .border-blue-200 {
   --tw-border-opacity: 1;
   border-color: rgb(191 219 254 / var(--tw-border-opacity));
@@ -1218,6 +1230,21 @@ select {
   background-color: rgb(254 249 195 / var(--tw-bg-opacity));
 }
 
+.bg-green-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(187 247 208 / var(--tw-bg-opacity));
+}
+
+.bg-orange-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 215 170 / var(--tw-bg-opacity));
+}
+
+.bg-red-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
+}
+
 .fill-current {
   fill: currentColor;
 }
@@ -1286,6 +1313,16 @@ select {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .pb-2 {
@@ -1383,6 +1420,11 @@ select {
   line-height: 1.75rem;
 }
 
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1417,6 +1459,10 @@ select {
 
 .tracking-wide {
   letter-spacing: 0.025em;
+}
+
+.tracking-wider {
+  letter-spacing: 0.05em;
 }
 
 .text-black {
@@ -1474,6 +1520,26 @@ select {
   color: rgb(133 77 14 / var(--tw-text-opacity));
 }
 
+.text-gray-900 {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+
+.text-green-900 {
+  --tw-text-opacity: 1;
+  color: rgb(20 83 45 / var(--tw-text-opacity));
+}
+
+.text-orange-900 {
+  --tw-text-opacity: 1;
+  color: rgb(124 45 18 / var(--tw-text-opacity));
+}
+
+.text-red-900 {
+  --tw-text-opacity: 1;
+  color: rgb(127 29 29 / var(--tw-text-opacity));
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -1489,6 +1555,10 @@ select {
 
 .opacity-75 {
   opacity: 0.75;
+}
+
+.opacity-50 {
+  opacity: 0.5;
 }
 
 .shadow {

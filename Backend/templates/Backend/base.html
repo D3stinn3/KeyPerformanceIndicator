@@ -27,7 +27,7 @@
 
     <aside class="relative bg-sidebar h-screen w-64 hidden sm:block shadow-xl">
         <div class="p-6">
-            <a href="index.html" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">KPI</a>
+            <a href="index.html" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">MAMH KPI</a>
             <button class="w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
                 <i class="fas fa-plus mr-3"></i> Comment
             </button>
@@ -37,21 +37,9 @@
                 <i class="fas fa-tachometer-alt mr-3"></i>
                 Dashboard
             </a>
-            <a href="blank.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
-                <i class="fas fa-sticky-note mr-3"></i>
-                Blank Page
-            </a>
-            <a href="tables.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+            <a href="{% url 'kpi' %}" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
                 <i class="fas fa-table mr-3"></i>
-                Tables
-            </a>
-            <a href="forms.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
-                <i class="fas fa-align-left mr-3"></i>
-                Forms
-            </a>
-            <a href="tabs.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
-                <i class="fas fa-tablet-alt mr-3"></i>
-                Tabbed Content
+                KPI
             </a>
             <a href="{% url 'calendar' %}" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
                 <i class="fas fa-calendar mr-3"></i>
@@ -60,7 +48,7 @@
         </nav>
         <a href="#" class="absolute w-full upgrade-btn bottom-0 active-nav-link text-white flex items-center justify-center py-4">
             <i class="fas fa-arrow-circle-up mr-3"></i>
-            Upgrade to Pro!
+            Weekly Report
         </a>
     </aside>
 
@@ -84,7 +72,7 @@
         <!-- Mobile Header & Nav -->
         <header x-data="{ isOpen: false }" class="w-full bg-sidebar py-5 px-6 sm:hidden">
             <div class="flex items-center justify-between">
-                <a href="index.html" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Admin</a>
+                <a href="index.html" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">MAMH KPI</a>
                 <button @click="isOpen = !isOpen" class="text-white text-3xl focus:outline-none">
                     <i x-show="!isOpen" class="fas fa-bars"></i>
                     <i x-show="isOpen" class="fas fa-times"></i>
@@ -97,23 +85,11 @@
                     <i class="fas fa-tachometer-alt mr-3"></i>
                     Dashboard
                 </a>
-                <a href="blank.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
-                    <i class="fas fa-sticky-note mr-3"></i>
-                    Blank Page
-                </a>
-                <a href="tables.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                <a href="{% url 'kpi' %}" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
                     <i class="fas fa-table mr-3"></i>
-                    Tables
+                    KPI
                 </a>
-                <a href="forms.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
-                    <i class="fas fa-align-left mr-3"></i>
-                    Forms
-                </a>
-                <a href="tabs.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
-                    <i class="fas fa-tablet-alt mr-3"></i>
-                    Tabbed Content
-                </a>
-                <a href="calendar.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                <a href="{% url 'calendar' %}" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
                     <i class="fas fa-calendar mr-3"></i>
                     Calendar
                 </a>
@@ -130,7 +106,7 @@
                     Sign Out
                 </a>
                 <button class="w-full bg-white cta-btn font-semibold py-2 mt-3 rounded-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
-                    <i class="fas fa-arrow-circle-up mr-3"></i> Upgrade to Pro!
+                    <i class="fas fa-arrow-circle-up mr-3"></i> Weekly Report
                 </button>
             </nav>
             <!-- <button class="w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
@@ -145,7 +121,7 @@
                 <div class="flex flex-wrap mt-6">
                     <div class="w-full lg:w-1/2 pr-0 lg:pr-2">
                         <p class="text-xl pb-3 flex items-center">
-                            <i class="fas fa-plus mr-3"></i> KPI Monthly Reports
+                            <i class="fas fa-plus mr-3"></i> Weekly Departmental KPI Analytics
                         </p>
                         <div class="p-6 bg-white">
                             <canvas id="chartOne" width="400" height="200"></canvas>
@@ -153,7 +129,7 @@
                     </div>
                     <div class="w-full lg:w-1/2 pl-0 lg:pl-2 mt-12 lg:mt-0">
                         <p class="text-xl pb-3 flex items-center">
-                            <i class="fas fa-check mr-3"></i> KPI Monthly Analytics
+                            <i class="fas fa-check mr-3"></i> Monthly Departmental KPI Analytics
                         </p>
                         <div class="p-6 bg-white">
                             <canvas id="chartTwo" width="400" height="200"></canvas>
@@ -163,66 +139,60 @@
     
                 <div class="w-full mt-12">
                     <p class="text-xl pb-3 flex items-center">
-                        <i class="fas fa-list mr-3"></i> Latest Reports
+                        <i class="fas fa-list mr-3"></i> Active KPI
                     </p>
                     <div class="bg-white overflow-auto">
                         <table class="min-w-full bg-white">
                             <thead class="bg-gray-800 text-white">
                                 <tr>
                                     <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Name</th>
-                                    <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Last name</th>
-                                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Phone</th>
-                                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Email</th>
+                                    <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">KPI</th>
+                                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Value</th>
+                                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Cumulative</th>
                                 </tr>
                             </thead>
                             <tbody class="text-gray-700">
                                 <tr>
-                                    <td class="w-1/3 text-left py-3 px-4">Lian</td>
-                                    <td class="w-1/3 text-left py-3 px-4">Smith</td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
+                                    <td class="w-1/3 text-left py-3 px-4">Ms Hawa</td>
+                                    <td class="w-1/3 text-left py-3 px-4">Ensuring well documantation of OPD registers</td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">60%</a></td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com"></a>30%</td>
                                 </tr>
                                 <tr class="bg-gray-200">
-                                    <td class="w-1/3 text-left py-3 px-4">Emma</td>
-                                    <td class="w-1/3 text-left py-3 px-4">Johnson</td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
+                                    <td class="w-1/3 text-left py-3 px-4">Mr Herbert</td>
+                                    <td class="w-1/3 text-left py-3 px-4">Ensuring departmental meetings every month</td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">50%</a></td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">50%</a></td>
                                 </tr>
                                 <tr>
-                                    <td class="w-1/3 text-left py-3 px-4">Oliver</td>
-                                    <td class="w-1/3 text-left py-3 px-4">Williams</td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
+                                    <td class="w-1/3 text-left py-3 px-4">Mr Destinne</td>
+                                    <td class="w-1/3 text-left py-3 px-4">Sustain proper use of HMIS</td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">20%</a></td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">80%</a></td>
                                 </tr>
                                 <tr class="bg-gray-200">
-                                    <td class="w-1/3 text-left py-3 px-4">Isabella</td>
-                                    <td class="w-1/3 text-left py-3 px-4">Brown</td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
+                                    <td class="w-1/3 text-left py-3 px-4">Sr Regina</td>
+                                    <td class="w-1/3 text-left py-3 px-4">Proper account for cash and mpesa payments</td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">70%</a></td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">30%</a></td>
                                 </tr>
                                 <tr>
-                                    <td class="w-1/3 text-left py-3 px-4">Lian</td>
-                                    <td class="w-1/3 text-left py-3 px-4">Smith</td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
+                                    <td class="w-1/3 text-left py-3 px-4">Dr Lulu</td>
+                                    <td class="w-1/3 text-left py-3 px-4">Manage to admit at least 10 patients</td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">40%</a></td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">60%</a></td>
                                 </tr>
                                 <tr class="bg-gray-200">
-                                    <td class="w-1/3 text-left py-3 px-4">Emma</td>
-                                    <td class="w-1/3 text-left py-3 px-4">Johnson</td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
+                                    <td class="w-1/3 text-left py-3 px-4">Dr Agnes</td>
+                                    <td class="w-1/3 text-left py-3 px-4">Manage to perform at least 30 TB screenings</td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">60%</a></td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">40%</a></td>
                                 </tr>
                                 <tr>
-                                    <td class="w-1/3 text-left py-3 px-4">Oliver</td>
-                                    <td class="w-1/3 text-left py-3 px-4">Williams</td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
-                                </tr>
-                                <tr class="bg-gray-200">
-                                    <td class="w-1/3 text-left py-3 px-4">Isabella</td>
-                                    <td class="w-1/3 text-left py-3 px-4">Brown</td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
+                                    <td class="w-1/3 text-left py-3 px-4">Lucy</td>
+                                    <td class="w-1/3 text-left py-3 px-4">Ensure correct data entry at reception</td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">20%</a></td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">80%</a></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -249,7 +219,7 @@
         var myChart = new Chart(chartOne, {
             type: 'bar',
             data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                labels: ['Nursing', 'Clinical', 'ICT', 'Admin', 'Pharmacy', 'Maintenance'],
                 datasets: [{
                     label: '# of Votes',
                     data: [12, 19, 3, 16, 2, 12],
@@ -287,7 +257,7 @@
         var myLineChart = new Chart(chartTwo, {
             type: 'line',
             data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange',],
+                labels: ['Nursing', 'Clinical', 'ICT', 'Admin', 'Pharmacy', 'Maintenance',],
                 datasets: [{
                     label: '# of Votes',
                     data: [12, 19, 3, 5, 2, 16],

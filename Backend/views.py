@@ -11,4 +11,4 @@ def calender(request):
 
 def kpibreakdown(request):
     context = {}
-    return render(request, 'Backend/personal.html', context)
+    return render(request, 'Backend/kpi.html', context)

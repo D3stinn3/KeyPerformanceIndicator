@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from .forms import UserCreate
+from .models import User
 
 # Create your views here.
 def index(request):
@@ -17,9 +18,10 @@ def kpibreakdown(request):
 
 def loginpage_(request):
     if request.method == "POST":
+        
         username = authenticate(
-            email = request.POST['email'],
-            password = request.POST['password']
+            email=request.POST['email'],
+            password=request.POST['password'] 
         )
         
         if username is not None:

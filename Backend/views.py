@@ -18,15 +18,16 @@ def kpibreakdown(request):
 
 def loginpage_(request):
     if request.method == "POST":
+        if 'email' in request.POST:
+            
+            username = authenticate(
+                email=request.POST['email'],
+                password=request.POST['password'] 
+            )
         
-        username = authenticate(
-            email=request.POST['email'],
-            password=request.POST['password'] 
-        )
-        
-        if username is not None:
-            login(request, username)
-            return redirect('home')
+            if username is not None:
+                login(request, username)
+                return redirect('home')
         
     context = {}
     return render(request, 'Backend/login.html', context)

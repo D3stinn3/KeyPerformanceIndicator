@@ -34,9 +34,4 @@ class KPI(models.Model):
     updated = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
-        return self.kpi_name
-    
-
-    
-    
-    
+        return self.kpi_name     
